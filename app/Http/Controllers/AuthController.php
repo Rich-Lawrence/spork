@@ -33,10 +33,10 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             return redirect()->intended('dashboard')
-                ->withSuccess('You are now logged in');
+                ->with('success', 'You are now logged in');
         }
 
-        return redirect("login")->withSuccess('Oops! You have entered invalid credentials');
+        return redirect("login")->with('error', 'Oops! You have entered invalid credentials');
     }
 
     public function postRegister(Request $request): RedirectResponse
@@ -57,11 +57,7 @@ class AuthController extends Controller
 
     public function dashboard()
     {
-        if(Auth::check()){
-            return view('dashboard');
-        }
-
-        return redirect('login')->with('error', 'You are not allowed to access');
+        return view('dashboard');
     }
 
     public function create(array $data)
@@ -78,6 +74,6 @@ class AuthController extends Controller
         Session::flush();
         Auth::logout();
 
-        return Redirect('login');
+        return Redirect('dashboard');
     }
 }
