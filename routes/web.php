@@ -27,3 +27,19 @@ Route::get('registration', [AuthController::class, 'register'])->name('register'
 Route::post('post-registration', [AuthController::class, 'postRegister'])->name('register.post');
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');;
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+
+####################################################
+#                    Auth Routes                   #
+####################################################
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('locked', function () {
+        dd('123');
+    });
+
+    Route::get('locked2', function () {
+        dd('hello2');
+    });
+
+});

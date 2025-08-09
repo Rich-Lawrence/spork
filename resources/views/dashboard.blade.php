@@ -44,7 +44,7 @@
                 @if(Auth::check())
                     <h1 class="display-5 fw-bold">Hi, {{ auth()->user()->name }}</h1>
                 @endif
-                <p class="col-md-8 fs-4">Welcome to dashboard.<br/>Put some shit here.</p>
+                <p class="col-md-8 fs-4">Welcome to dashboard<br/>Put some shit here.</p>
                 <button class="btn btn-secondary btn-lg" type="button">Home</button>
             </div>
         </div>
