@@ -19,7 +19,7 @@
                         @csrf
                         <div class="col-md-1 bg-dark">
                             <div class="d-grid my-3">
-                                <button class="btn btn-secondary btn-lg"
+                                <button class="btn btn-dark btn-sm"
                                         type="submit">{{ __('Logout') }}</button>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                         @csrf
                         <div class="col-md-1 bg-dark">
                             <div class="d-grid my-3">
-                                <button class="btn btn-secondary btn-lg"
+                                <button class="btn btn-dark btn-sm"
                                         type="submit">{{ __('Login') }}</button>
                             </div>
                         </div>

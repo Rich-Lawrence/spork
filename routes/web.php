@@ -42,4 +42,8 @@ Route::middleware(['auth'])->group(function () {
         dd('hello2');
     });
 
+    Route::get('soundcloud', function () {
+        return view('soundcloud');
+    });
+
 });
